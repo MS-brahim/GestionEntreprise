@@ -79,6 +79,36 @@
     "name": "Entreprise AA",
     "discription": "hfhdfgvttftftefe",
     "location": "Safi - 123",
-    "deprartments": []
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Daprt abada",
+        "chef": "me",
+        "discription": "hsgy ygst",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Daprt gogo",
+        "chef": "memem",
+        "discription": "hsgy ygst jdhhsgsg",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Abada corp",
+    "discription": "i don't know i just like the way how this is work",
+    "location": "Merakech",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Sfad",
+        "chef": "fgfd",
+        "discription": "dfghjkl",
+        "salaries": []
+      }
+    ]
   }
 ]
