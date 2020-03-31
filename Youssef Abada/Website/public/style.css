@@ -1,0 +1,27 @@
+.ent{
+    border: 1px solid #333;
+    border-radius: 30px;
+
+}
+
+.ent .ent-name{
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+}
+
+.ent .ent-body{
+    padding: 6px 10px 15px 10px;
+}
+
+.ent .show-more{
+    cursor: pointer;
+}
+.ent .ent-detail .map{
+    width: 100%;
+    height: 200px;
+}
+.ent .ent-detail .detail-text{
+    display: flex;
+    justify-content: space-between;
+}

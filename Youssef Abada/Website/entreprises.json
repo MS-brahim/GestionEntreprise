@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "name": "A",
+    "discription": "discription 1",
+    "location": "local A",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "department 1",
+        "chef": "chef de department 1",
+        "discription": "bla bla bla",
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "HH13455",
+            "name": "Youssef",
+            "alseName": "Abada",
+            "age": 26,
+            "salaire": "30000DH"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "B",
+    "discription": "discription 2",
+    "location": "local B",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Depaert BbB",
+        "chef": "Salah",
+        "discription": "salah is a weeb",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Golha",
+        "chef": "Holha",
+        "discription": "hahahah hohoh looo",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "deep weeb",
+        "chef": "weeb",
+        "discription": "anime weeb",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "D dhdsgvsgvgvg",
+    "discription": "dbsgsgvzzffzff",
+    "location": "ahahah",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Depart 1",
+        "chef": "Ramadan",
+        "discription": "haha haha hooooooooooo",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Halo yo",
+        "chef": "chef ana",
+        "discription": "description hahah",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Entreprise AA",
+    "discription": "hfhdfgvttftftefe",
+    "location": "Safi - 123",
+    "deprartments": []
+  }
+]

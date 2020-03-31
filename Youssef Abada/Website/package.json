@@ -1,0 +1,29 @@
+{
+  "name": "ecms_brief",
+  "version": "1.0.0",
+  "description": "A demo website use ajax to manage entreprices",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MS-brahim/GestionEntreprise.git"
+  },
+  "keywords": [
+    "youcode",
+    "brief",
+    "bootstrap",
+    "jquery",
+    "ajax"
+  ],
+  "author": "Youssef Abada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MS-brahim/GestionEntreprise/issues"
+  },
+  "homepage": "https://github.com/MS-brahim/GestionEntreprise#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
