@@ -10,11 +10,13 @@ app.use('/', router);
 app.use(express.json());
 
 
-app.get('/api/entreprices', (req, res) => {
+//get all the entreprises
+app.get('/api/entreprises', (req, res) => {
     res.sendFile(path.join(__dirname + '\\entreprises.json'));
 });
 
-app.post('/api/entreprices', (req, res) => {
+//add an entreprise
+app.post('/api/entreprises', (req, res) => {
     fs.readFile("entreprises.json", (err, data) => {
         if (err) {
             return console.error(err);
@@ -27,42 +29,44 @@ app.post('/api/entreprices', (req, res) => {
                 "location": req.body.location,
                 "deprartments": []
             });
-            fs.writeFile("entreprises.json", JSON.stringify(entreprices , null, 2), (err, result) => {
+            fs.writeFile("entreprises.json", JSON.stringify(entreprices, null, 2), (err, result) => {
                 if (err) {
                     return console.error(err);
                 } else {
                     res.send("the entreprise is added successfully")
                 }
-        
+
             });
         }
     });
 });
 
-app.get('/api/entreprices/:id', (req, res) => {
+//get departements of an id entreprise
+app.get('/api/entreprises/:id', (req, res) => {
     fs.readFile("entreprises.json", (err, data) => {
         if (err) {
             return console.error(err);
         } else {
             const entreprices = JSON.parse(data);
             const entreprice = entreprices.find(e => e.id === +req.params.id);
-            if(!entreprice) return res.status(404).send("there is no such entreprise");
-            else{
-                res.status(200).send(entreprice);
-            } 
+            if (!entreprice) return res.status(404).send("there is no such entreprise");
+            else {
+                res.send(entreprice);
+            }
         }
     });
 });
 
-app.post('/api/entreprices/:id', (req, res) => {
+//add departements of an id entreprise
+app.post('/api/entreprises/:id', (req, res) => {
     fs.readFile("entreprises.json", (err, data) => {
         if (err) {
             return console.error(err);
         } else {
             const entreprices = JSON.parse(data);
             const entreprice = entreprices.find(e => e.id === +req.params.id);
-            if(!entreprice) return res.status(404).send("there is no such entreprise");
-            else{
+            if (!entreprice) return res.status(404).send("there is no such entreprise");
+            else {
                 entreprice.deprartments.push({
                     "id": entreprice.deprartments.length + 1,
                     "name": req.body.name,
@@ -70,18 +74,76 @@ app.post('/api/entreprices/:id', (req, res) => {
                     "discription": req.body.discription,
                     "salaries": []
                 });
-                fs.writeFile("entreprises.json", JSON.stringify(entreprices , null, 2), (err, result) => {
+                fs.writeFile("entreprises.json", JSON.stringify(entreprices, null, 2), (err, result) => {
                     if (err) {
                         return console.error(err);
                     } else {
                         res.send("the department is added successfully")
                     }
-            
+
                 });
-            } 
+            }
         }
     });
 });
+
+//add a salary of an id departement in an id entreprise
+app.post('/api/entreprises/:idE/:idD', (req, res) => {
+    fs.readFile("entreprises.json", (err, data) => {
+        if (err) {
+            return console.error(err);
+        } else {
+            const entreprices = JSON.parse(data);
+            const departement = entreprices.find(e => e.id === +req.params.idE && e.deprartments.id === +req.params.idD);
+            if (!entreprice) return res.status(404).send("there is no such entreprise or department");
+            else {
+                departement.salaries.push({
+                    "id": deprartments.salaries.length + 1,
+                    "matricule": req.body.matricule,
+                    "name": req.body.name,
+                    "lastName": req.body.lastName,
+                    "age": req.body.age,
+                    "salaire": req.body.salaire
+                });
+                fs.writeFile("entreprises.json", JSON.stringify(entreprices, null, 2), (err, result) => {
+                    if (err) {
+                        return console.error(err);
+                    } else {
+                        res.send("the salary is added successfully")
+                    }
+
+                });
+            }
+        }
+    });
+});
+
+//search on salary by his name
+app.get('/api/search', (req, res) => {
+    let salaries = [];
+    fs.readFile("entreprises.json", (err, data) => {
+        if (err) {
+            return console.error(err);
+        } else {
+            const entreprices = JSON.parse(data);
+            for (let e = 0; e < entreprices.length; e++) {
+                for (let d = 0; d < entreprices[e].deprartments.length; d++) {
+                    for(let s = 0; s < entreprices[e].deprartments[d].salaries.length; s++){
+                        if(entreprices[e].deprartments[d].salaries[s].name.toLowerCase() === req.query.name.toLowerCase()){
+                            salaries.push(entreprices[e].deprartments[d].salaries[s]);
+                        }
+                    }
+                }
+            }
+            res.send(salaries);
+        }
+    });
+});
+
+
+
+
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`listening on port ${port}`));

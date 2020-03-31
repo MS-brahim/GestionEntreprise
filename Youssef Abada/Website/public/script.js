@@ -13,7 +13,7 @@ $(document).ready(function () {
 
 function loadEntreprises() {
     let request = new XMLHttpRequest();
-    request.open("GET", "http://localhost:3000/api/entreprices", true);
+    request.open("GET", "http://localhost:3000/api/entreprises", true);
     request.onload = function () {
         if (this.status == 200) {
             document.getElementById("entreprises").innerHTML = "";
@@ -54,7 +54,7 @@ function addEnt() {
     };
     const formData = JSON.stringify(entreprise);
 
-    request.open("POST", "http://localhost:3000/api/entreprices", true);
+    request.open("POST", "http://localhost:3000/api/entreprises", true);
     request.setRequestHeader("Content-type", "application/json");
     request.send(formData);
 }
@@ -63,7 +63,7 @@ function addEnt() {
 function showDepatements(id) {
 
     let request = new XMLHttpRequest();
-    request.open("GET", "http://localhost:3000/api/entreprices/" + id, true);
+    request.open("GET", "http://localhost:3000/api/entreprises/" + id, true);
 
     request.onload = function () {
         if (this.status == 200) {
@@ -109,7 +109,7 @@ function addDepartment(id) {
     };
     const formData = JSON.stringify(deprartment);
 
-    request.open("POST", "http://localhost:3000/api/entreprices/" + id, true);
+    request.open("POST", "http://localhost:3000/api/entreprises/" + id, true);
     request.setRequestHeader("Content-type", "application/json");
     request.send(formData);
 }
