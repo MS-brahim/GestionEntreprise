@@ -125,6 +125,8 @@ app.get('/department.html', (req, res) => {
                 for (let d = 0; d < entreprices[e].deprartments.length; d++) {
                     if(entreprices[e].id === +req.query.entId && entreprices[e].deprartments[d].id === +req.query.depId){
                         currentDepatment = entreprices[e].deprartments[d];
+                        currentDepatment.entrepriceID = entreprices[e].id;
+                        currentDepatment.entrepriceName = entreprices[e].name;
                         res.redirect('/department.html');
                         return;
                     }
@@ -142,6 +144,7 @@ app.get('/api/departement/', (req, res) => {
 
 //add a salary of an id departement in an id entreprise
 app.post('/api/departement/:idE/:idD', (req, res) => {
+
     fs.readFile("entreprises.json", (err, data) => {
         if (err) {
             return console.error(err);

@@ -21,7 +21,7 @@ function loadDepartmentInfo() {
     request.onload = function () {
         if (this.status == 200) {
             let departement = JSON.parse(this.responseText);
-            document.getElementById("departName").innerHTML = departement.name;
+            document.getElementById("departName").innerHTML = departement.name + " <small>entreprise name <strong>"+ departement.entrepriceName +"</strong> id(<strong>"+departement.entrepriceID+"</strong>)</small>";
             document.getElementById("depInfo").innerHTML = '<tr><td>' + departement.id + '</td><td>' + departement.name + '</td><td>' + departement.chef + '</td><td>' + departement.discription + '</td><td>' + departement.salaries.length + '</td></tr>';
         }
     }
