@@ -124,7 +124,8 @@ app.get('/department.html', (req, res) => {
             for (let e = 0; e < entreprices.length; e++) {
                 for (let d = 0; d < entreprices[e].deprartments.length; d++) {
                     if(entreprices[e].id === +req.query.entId && entreprices[e].deprartments[d].id === +req.query.depId){
-                        currentDepatment =  entreprices[e].deprartments[d];
+                        currentDepatment = entreprices[e].deprartments[d];
+                        res.redirect('/department.html');
                         return;
                     }
                 }

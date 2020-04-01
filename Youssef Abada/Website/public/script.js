@@ -8,12 +8,29 @@ $(document).ready(function () {
         $(this).hide(200);
         $("#show").show(200);
     });
-    loadEntreprises();
+    if (window.location.pathname === "/")
+        loadEntreprises();
+    if (window.location.pathname === "/department.html") {
+        loadDepartmentInfo();
+    }
 });
+
+function loadDepartmentInfo() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "/api/departement/", true);
+    request.onload = function () {
+        if (this.status == 200) {
+            let departement = JSON.parse(this.responseText);
+            document.getElementById("departName").innerHTML = departement.name;
+            document.getElementById("depInfo").innerHTML = '<tr><td>' + departement.id + '</td><td>' + departement.name + '</td><td>' + departement.chef + '</td><td>' + departement.discription + '</td><td>' + departement.salaries.length + '</td></tr>';
+        }
+    }
+    request.send();
+}
 
 function loadEntreprises() {
     let request = new XMLHttpRequest();
-    request.open("GET", "http://localhost:3000/api/entreprises", true);
+    request.open("GET", "/api/entreprises", true);
     request.onload = function () {
         if (this.status == 200) {
             document.getElementById("entreprises").innerHTML = "";
@@ -54,7 +71,7 @@ function addEnt() {
     };
     const formData = JSON.stringify(entreprise);
 
-    request.open("POST", "http://localhost:3000/api/entreprises", true);
+    request.open("POST", "/api/entreprises", true);
     request.setRequestHeader("Content-type", "application/json");
     request.send(formData);
 }
@@ -63,7 +80,7 @@ function addEnt() {
 function showDepatements(id) {
 
     let request = new XMLHttpRequest();
-    request.open("GET", "http://localhost:3000/api/entreprises/" + id, true);
+    request.open("GET", "/api/entreprises/" + id, true);
 
     request.onload = function () {
         if (this.status == 200) {
@@ -71,12 +88,12 @@ function showDepatements(id) {
             let deprartments = entreprise.deprartments;
             document.getElementById("entrOfDep").innerHTML = entreprise.name;
             removeClickListeners("showDepBtn");
-            document.getElementById("showDepBtn").addEventListener('click', function(){
+            document.getElementById("showDepBtn").addEventListener('click', function () {
                 AddDepartmentModal(entreprise.id, entreprise.name);
             });
             let rows = "";
             for (let d in deprartments) {
-                rows += '<tr><td>' + deprartments[d].id + '</td><td>' + deprartments[d].name + '</td></tr>';
+                rows += '<tr><td>' + deprartments[d].id + '</td><td>' + deprartments[d].name + '</td><td><a href="/department.html/?entId='+id+'&depId='+deprartments[d].id+'">plus de info <i class="fa fa-chevron-right" style="font-size:20px;"></i></a></td></tr>';
             }
             document.getElementById("depTable").innerHTML = rows;
         }
@@ -88,7 +105,7 @@ function showDepatements(id) {
 function AddDepartmentModal(id, name) {
     document.getElementById("EnterpName").innerHTML = name;
     removeClickListeners("addDepBtn");
-    document.getElementById("addDepBtn").addEventListener("click", function(){
+    document.getElementById("addDepBtn").addEventListener("click", function () {
         addDepartment(id);
     });
 }
@@ -110,12 +127,12 @@ function addDepartment(id) {
     };
     const formData = JSON.stringify(deprartment);
 
-    request.open("POST", "http://localhost:3000/api/entreprises/" + id, true);
+    request.open("POST", "/api/entreprises/" + id, true);
     request.setRequestHeader("Content-type", "application/json");
     request.send(formData);
 }
 
-function removeClickListeners(btnId){
+function removeClickListeners(btnId) {
     let old_element = document.getElementById(btnId);
     let new_element = old_element.cloneNode(true);
     old_element.parentNode.replaceChild(new_element, old_element);
