@@ -69,15 +69,16 @@ function showDepatements(id) {
         if (this.status == 200) {
             let entreprise = JSON.parse(this.responseText);
             let deprartments = entreprise.deprartments;
+            document.getElementById("entrOfDep").innerHTML = entreprise.name;
+            removeClickListeners("showDepBtn");
+            document.getElementById("showDepBtn").addEventListener('click', function(){
+                AddDepartmentModal(entreprise.id, entreprise.name);
+            });
             let rows = "";
             for (let d in deprartments) {
                 rows += '<tr><td>' + deprartments[d].id + '</td><td>' + deprartments[d].name + '</td></tr>';
             }
             document.getElementById("depTable").innerHTML = rows;
-            document.getElementById("entrOfDep").innerHTML = entreprise.name;
-            document.getElementById("showDepBtn").addEventListener('click', function(){
-                AddDepartmentModal(entreprise.id, entreprise.name);
-            });
         }
     };
     request.send();
@@ -86,9 +87,10 @@ function showDepatements(id) {
 
 function AddDepartmentModal(id, name) {
     document.getElementById("EnterpName").innerHTML = name;
+    removeClickListeners("addDepBtn");
     document.getElementById("addDepBtn").addEventListener("click", function(){
         addDepartment(id);
-    })
+    });
 }
 
 
@@ -96,7 +98,6 @@ function addDepartment(id) {
     let request = new XMLHttpRequest();
     request.onload = function () {
         if (this.status == 200) {
-            //console.log(this.responseText);
             loadEntreprises();
             showDepatements(id)
         }
@@ -112,4 +113,10 @@ function addDepartment(id) {
     request.open("POST", "http://localhost:3000/api/entreprises/" + id, true);
     request.setRequestHeader("Content-type", "application/json");
     request.send(formData);
+}
+
+function removeClickListeners(btnId){
+    let old_element = document.getElementById(btnId);
+    let new_element = old_element.cloneNode(true);
+    old_element.parentNode.replaceChild(new_element, old_element);
 }

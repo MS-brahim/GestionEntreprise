@@ -8,7 +8,11 @@ const router = express.Router();
 app.use(express.static(__dirname + '\\public'));
 app.use('/', router);
 app.use(express.json());
+let currentDepatment = {};
 
+app.get('/', (req, res) => {
+    currentDepatment = {};
+});
 
 //get all the entreprises
 app.get('/api/entreprises', (req, res) => {
@@ -57,7 +61,7 @@ app.get('/api/entreprises/:id', (req, res) => {
     });
 });
 
-//add departements of an id entreprise
+//add departements using an id entreprise
 app.post('/api/entreprises/:id', (req, res) => {
     fs.readFile("entreprises.json", (err, data) => {
         if (err) {
@@ -79,37 +83,6 @@ app.post('/api/entreprises/:id', (req, res) => {
                         return console.error(err);
                     } else {
                         res.send("the department is added successfully")
-                    }
-
-                });
-            }
-        }
-    });
-});
-
-//add a salary of an id departement in an id entreprise
-app.post('/api/entreprises/:idE/:idD', (req, res) => {
-    fs.readFile("entreprises.json", (err, data) => {
-        if (err) {
-            return console.error(err);
-        } else {
-            const entreprices = JSON.parse(data);
-            const departement = entreprices.find(e => e.id === +req.params.idE && e.deprartments.id === +req.params.idD);
-            if (!entreprice) return res.status(404).send("there is no such entreprise or department");
-            else {
-                departement.salaries.push({
-                    "id": deprartments.salaries.length + 1,
-                    "matricule": req.body.matricule,
-                    "name": req.body.name,
-                    "lastName": req.body.lastName,
-                    "age": req.body.age,
-                    "salaire": req.body.salaire
-                });
-                fs.writeFile("entreprises.json", JSON.stringify(entreprices, null, 2), (err, result) => {
-                    if (err) {
-                        return console.error(err);
-                    } else {
-                        res.send("the salary is added successfully")
                     }
 
                 });
@@ -140,7 +113,62 @@ app.get('/api/search', (req, res) => {
     });
 });
 
+//get the departement information
+app.get('/department.html', (req, res) => {
 
+    fs.readFile("entreprises.json", (err, data) => {
+        if (err) {
+            return console.error(err);
+        } else {
+            const entreprices = JSON.parse(data);
+            for (let e = 0; e < entreprices.length; e++) {
+                for (let d = 0; d < entreprices[e].deprartments.length; d++) {
+                    if(entreprices[e].id === +req.query.entId && entreprices[e].deprartments[d].id === +req.query.depId){
+                        currentDepatment =  entreprices[e].deprartments[d];
+                        return;
+                    }
+                }
+            }
+            res.status(404).send("there is no such department")
+        }
+    });
+});
+
+
+app.get('/api/departement/', (req, res) => {
+    res.send(currentDepatment);
+});
+
+//add a salary of an id departement in an id entreprise
+app.post('/api/departement/:idE/:idD', (req, res) => {
+    fs.readFile("entreprises.json", (err, data) => {
+        if (err) {
+            return console.error(err);
+        } else {
+            const entreprices = JSON.parse(data);
+            const departement = entreprices.find(e => e.id === +req.params.idE && e.deprartments.id === +req.params.idD);
+            if (!entreprice) return res.status(404).send("there is no such entreprise or department");
+            else {
+                departement.salaries.push({
+                    "id": deprartments.salaries.length + 1,
+                    "matricule": req.body.matricule,
+                    "name": req.body.name,
+                    "lastName": req.body.lastName,
+                    "age": req.body.age,
+                    "salaire": req.body.salaire
+                });
+                fs.writeFile("entreprises.json", JSON.stringify(entreprices, null, 2), (err, result) => {
+                    if (err) {
+                        return console.error(err);
+                    } else {
+                        res.send("the salary is added successfully")
+                    }
+
+                });
+            }
+        }
+    });
+});
 
 
 

@@ -20,6 +20,13 @@
             "salaire": "30000DH"
           }
         ]
+      },
+      {
+        "id": 2,
+        "name": "Folz2GG",
+        "chef": "GolamGG",
+        "discription": "boloa nola bola",
+        "salaries": []
       }
     ]
   },
@@ -49,6 +56,20 @@
         "chef": "weeb",
         "discription": "anime weeb",
         "salaries": []
+      },
+      {
+        "id": 4,
+        "name": "Domaaaaaa",
+        "chef": "goooooooooooooool",
+        "discription": "fdssssssssss",
+        "salaries": []
+      },
+      {
+        "id": 5,
+        "name": "Youtube",
+        "chef": "youssef Abada",
+        "discription": "sellicon vally",
+        "salaries": []
       }
     ]
   },
@@ -70,6 +91,20 @@
         "name": "Halo yo",
         "chef": "chef ana",
         "discription": "description hahah",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "Folz2GG",
+        "chef": "GolamGG",
+        "discription": "boloa nola bola",
+        "salaries": []
+      },
+      {
+        "id": 4,
+        "name": "Youtube",
+        "chef": "youssef Abada",
+        "discription": "sellicon vally",
         "salaries": []
       }
     ]
@@ -93,6 +128,27 @@
         "chef": "memem",
         "discription": "hsgy ygst jdhhsgsg",
         "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "Domaaaaaadd",
+        "chef": "goooooooooooooool",
+        "discription": "fdssssssssss",
+        "salaries": []
+      },
+      {
+        "id": 4,
+        "name": "Youtube",
+        "chef": "youssef Abada",
+        "discription": "sellicon vally",
+        "salaries": []
+      },
+      {
+        "id": 5,
+        "name": "Youtube",
+        "chef": "youssef Abada",
+        "discription": "sellicon vally",
+        "salaries": []
       }
     ]
   },
@@ -107,6 +163,180 @@
         "name": "Sfad",
         "chef": "fgfd",
         "discription": "dfghjkl",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Depooooooo",
+        "chef": "moeaaa",
+        "discription": "hooooooooooola",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "Folz2GG",
+        "chef": "GolamGG",
+        "discription": "boloa nola bola",
+        "salaries": []
+      },
+      {
+        "id": 4,
+        "name": "Youtube",
+        "chef": "youssef Abada",
+        "discription": "sellicon vally",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Afmaf",
+    "discription": "hola senior",
+    "location": "safo local",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Folz",
+        "chef": "Golam",
+        "discription": "boloa nola bola",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Folz2",
+        "chef": "Golam",
+        "discription": "boloa nola bola",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "Folz2GG",
+        "chef": "GolamGG",
+        "discription": "boloa nola bola",
+        "salaries": []
+      },
+      {
+        "id": 4,
+        "name": "Folz2GG",
+        "chef": "GolamGG",
+        "discription": "boloa nola bola",
+        "salaries": []
+      },
+      {
+        "id": 5,
+        "name": "Domaaaaaadd",
+        "chef": "goooooooooooooool",
+        "discription": "fdssssssssss",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Forgan",
+    "discription": "hkloez",
+    "location": "holano",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Folz2GG",
+        "chef": "GolamGG",
+        "discription": "boloa nola bola",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Domaaaaaadd",
+        "chef": "goooooooooooooool",
+        "discription": "fdssssssssss",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "youssef",
+        "chef": "youssef Abada",
+        "discription": "rabat sale",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Googlze",
+    "discription": "google is the most awesome company",
+    "location": "USA",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Youtube",
+        "chef": "youssef Abada",
+        "discription": "sellicon vally",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Gmail",
+        "chef": "google",
+        "discription": "email service",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "Cortana",
+        "chef": "Windows 10",
+        "discription": "AI girl she is ugly tho",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Microsoft",
+    "discription": "Windows xp creator",
+    "location": "USA",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Cortana",
+        "chef": "Windows 10",
+        "discription": "AI girl she is ugly tho",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "MS office",
+        "chef": "Bier adison",
+        "discription": "tool set for desktop managment",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Yahoo",
+    "discription": "For news that care of everything",
+    "location": "France",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Yahoo news",
+        "chef": "Tomas Better",
+        "discription": "we give you all the news you need to know and care about",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Amazon",
+    "discription": "best service of selling goods",
+    "location": "USA - Florida",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Twitch",
+        "chef": "Steve pezos",
+        "discription": "is an online streaming platforms for everything",
         "salaries": []
       }
     ]
