@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
 .ent{
     border: 1px solid #333;
     border-radius: 30px;
@@ -30,4 +34,15 @@
     transition: height 1s;
     height: 70px;
     overflow: hidden;
+}
+.push{
+    height: 40px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 40px;
+    color: white;
 }
