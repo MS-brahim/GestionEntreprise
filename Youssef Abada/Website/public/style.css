@@ -14,7 +14,7 @@
     padding: 6px 10px 15px 10px;
 }
 
-.ent .show-more{
+.ent .show-more, .ent .show-less{
     cursor: pointer;
 }
 .ent .ent-detail .map{
@@ -26,6 +26,8 @@
     justify-content: space-between;
 }
 
-table tr{
-    cursor: pointer;
+.ent .ent-disc{
+    transition: height 1s;
+    height: 70px;
+    overflow: hidden;
 }

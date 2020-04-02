@@ -1,16 +1,12 @@
 /*jshint esversion: 6 */
 $(document).ready(function () {
-    if (window.location.pathname === "/")
+    if (window.location.pathname === "/") {
         loadEntreprises();
+    }
     if (window.location.pathname === "/department.html") {
         loadDepartmentInfo();
     }
 });
-
-
-function showhide(){
-    $(this).toggle();
-}
 
 function loadDepartmentInfo() {
     let request = new XMLHttpRequest();
@@ -18,7 +14,7 @@ function loadDepartmentInfo() {
     request.onload = function () {
         if (this.status == 200) {
             let departement = JSON.parse(this.responseText);
-            document.getElementById("departName").innerHTML = departement.name + " <small>entreprise name <strong>"+ departement.entrepriceName +"</strong> id(<strong>"+departement.entrepriceID+"</strong>)</small>";
+            document.getElementById("departName").innerHTML = departement.name + " <small>entreprise name <strong>" + departement.entrepriceName + "</strong> id(<strong>" + departement.entrepriceID + "</strong>)</small>";
             document.getElementById("depInfo").innerHTML = '<tr><td>' + departement.id + '</td><td>' + departement.name + '</td><td>' + departement.chef + '</td><td>' + departement.discription + '</td><td>' + departement.salaries.length + '</td></tr>';
         }
     }
@@ -37,20 +33,37 @@ function loadEntreprises() {
                 enter += "<div class='col-xs-12 col-sm-6 col-md-4 col-lg-3 my-2'>";
                 enter += "<div class='ent'><h3 class='ent-name'>" + entreprises[e].name + "</h3>";
                 enter += "<div class='ent-body'><p class='ent-disc'>" + entreprises[e].discription + "</p>";
-                enter += "<p id='show' class='text-primary show-more' data-toggle='collapse' data-target='#detail" + entreprises[e].id + "'>Plus d'info ▼</p>";
+                enter += "<p class='show-more text-primary' data-toggle='collapse' data-target='#detail" + entreprises[e].id + "'>Plus d'info ▼</p>";
                 enter += "<div id='detail" + entreprises[e].id + "' class='collapse'><div class='ent-detail'>";
                 enter += "<div style='width: 100%; height:150px;'>";
                 let adress = entreprises[e].location.replace(/ /g, "+").replace(/,/g, "");
-                enter += '<iframe width="100%" height="170" frameborder="0" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=' +adress+ '&z=14&output=embed"></iframe></div>';
-                enter += "<p class='text-primary'></p><div class='detail-text'><p>" + entreprises[e].location + "</p>'<p class='text-primary'></p><div class='detail-text'>";
+                enter += '<iframe width="100%" height="170" frameborder="0" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=' + adress + '&z=14&output=embed"></iframe></div>';
+                enter += "<p class='text-primary'></p><div class='detail-text'><p style='width: 50%;'>" + entreprises[e].location + "</p>'<p class='text-primary'></p><div class='detail-text'>";
                 enter += "<p><span class='text-primary'>" + entreprises[e].deprartments.length + "</span> déprartments</p></div></div>";
-                enter += "<p id='hide' class='text-primary show-more' data-toggle='collapse' data-target='#detail" + entreprises[e].id + "'>Montrer moins ▲</p></div>";
+                enter += "<p class='show-less text-primary' data-toggle='collapse' data-target='#detail" + entreprises[e].id + "'>Montrer moins ▲</p></div>";
                 enter += `</div><button onclick="showDepatements(${entreprises[e].id})" data-toggle="modal" data-target="#showDepatments" type="button" class="btn btn-primary btn-block" style="border-radius: 8px; font-size: .9em; background-color: #5599FF; color: white;">Afficher / ajouter des départements</button></div></div>`;
                 document.getElementById("entreprises").innerHTML += enter;
             }
+            toggleEffect();
         }
     };
     request.send();
+}
+
+function toggleEffect() {
+    let show = document.getElementsByClassName('show-more');
+    let hide = document.getElementsByClassName('show-less');
+    let disc = document.getElementsByClassName('ent-disc');
+    for (let i = 0; i < show.length; i++) {
+        show[i].addEventListener('click', function () {
+            this.style.display = "none";
+            disc[i].style.height = "auto";
+        });
+        hide[i].addEventListener('click', function () {
+            show[i].style.display = "block";
+            disc[i].style.height = "70px";
+        });
+    }
 }
 
 function addEnt() {
@@ -91,7 +104,7 @@ function showDepatements(id) {
             });
             let rows = "";
             for (let d in deprartments) {
-                rows += '<tr><td>' + deprartments[d].id + '</td><td>' + deprartments[d].name + '</td><td><a href="/department.html/?entId='+id+'&depId='+deprartments[d].id+'">plus de info <i class="fa fa-chevron-right" style="font-size:20px;"></i></a></td></tr>';
+                rows += '<tr><td>' + deprartments[d].id + '</td><td>' + deprartments[d].name + '</td><td><a href="/department.html/?entId=' + id + '&depId=' + deprartments[d].id + '">plus de info <i class="fa fa-chevron-right" style="font-size:20px;"></i></a></td></tr>';
             }
             document.getElementById("depTable").innerHTML = rows;
         }
