@@ -123,7 +123,8 @@ app.get('/department.html', (req, res) => {
             const entreprices = JSON.parse(data);
             for (let e = 0; e < entreprices.length; e++) {
                 for (let d = 0; d < entreprices[e].deprartments.length; d++) {
-                    if(entreprices[e].id === +req.query.entId && entreprices[e].deprartments[d].id === +req.query.depId){
+                    if(entreprices[e].id === +req.query.entId &&
+                     entreprices[e].deprartments[d].id === +req.query.depId){
                         currentDepatment = entreprices[e].deprartments[d];
                         currentDepatment.entrepriceID = entreprices[e].id;
                         currentDepatment.entrepriceName = entreprices[e].name;
@@ -131,6 +132,9 @@ app.get('/department.html', (req, res) => {
                         return;
                     }
                 }
+            }
+            if(currentDepatment){
+                    res.redirect('/department.html/?entId='+currentDepatment.entrepriceID+'&depId='+currentDepatment.id);
             }
             res.status(404).send("there is no such department")
         }
