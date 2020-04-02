@@ -18,9 +18,9 @@
         <a class="navbar-brand mr-auto" href="/">
             <img src="LOGO.png" alt="E-cms" style="width:80px;">
         </a>
-        <form class="form-inline">
+        <div class="form-inline">
             <div style="position: relative;">
-                <input class="form-control" style="border-radius: 30px; width: 300px;" type="text"
+                <input onkeyup="searchSalary(event,this)" class="form-control" style="border-radius: 30px; width: 300px;" type="text"
                     placeholder="chercher un salarié">
                 <div style="display: inline-block; position: absolute; right: 10px; bottom: 8px;"><i
                         class="fa fa-search" style="font-size:20px; color: #333;"></i></div>
@@ -151,7 +151,6 @@
         Tous droits réservés &copy; 2020
     </div>
     <script src="script.js"></script>
-    <!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script> -->
 
 </body>
 

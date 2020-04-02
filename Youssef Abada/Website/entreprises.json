@@ -33,7 +33,16 @@
         "name": "Facebook Messenger",
         "chef": "Mark Zuckerberg",
         "discription": "Facebook Messenger (commonly known as Messenger)[9] is an American messaging app and platform developed by Facebook, Inc. Originally developed as Facebook Chat in 2008, the company revamped its messaging service in 2010, and subsequently released standalone iOS and Android apps in August 2011 and standalone Facebook Portal hardware for Messenger-based calling in Q4 2018. Over the years, Facebook has released new apps on a variety of different operating systems, launched a dedicated website interface (Messenger.com), and separated the messaging functionality from the main Facebook app, allowing users to use the web interface or download one of the standalone apps.",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "HH199WW",
+            "name": "Youssef",
+            "lastName": "Mosa",
+            "age": 28,
+            "salaire": "60000DH"
+          }
+        ]
       }
     ]
   },
@@ -62,7 +71,16 @@
         "name": "MoPub Advertising Solutions",
         "chef": "Bryan Atwood",
         "discription": "In 2013, Twitter embarked on developing a mobile advertising exchange. This kind of advertising appears on mobile platforms with wireless connections such as smartphones and tablets. To do so, Twitter utilized the technology of MoPub through a $350 million acquisition. Headquartered in San Francisco, MoPub hosts the world’s largest mobile advertising server with a real-time bidding exchange.",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "RR1JJ55",
+            "name": "zakaria",
+            "lastName": "hola",
+            "age": 16,
+            "salaire": "900$"
+          }
+        ]
       },
       {
         "id": 4,
@@ -84,7 +102,16 @@
         "name": "Microsoft Windows",
         "chef": "Satya Nadella",
         "discription": "Microsoft Windows, commonly referred to as Windows, is a group of several proprietary graphical operating system families, all of which are developed and marketed by Microsoft. Each family caters to a certain sector of the computing industry. Active Microsoft Windows families include Windows NT and Windows IoT; these may encompass subfamilies, e.g. Windows Server or Windows Embedded Compact (Windows CE). Defunct Microsoft Windows families include Windows 9x, Windows Mobile and Windows Phone.",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "HH55455",
+            "name": "Youssef",
+            "lastName": "Zaki",
+            "age": 20,
+            "salaire": "7000DH"
+          }
+        ]
       },
       {
         "id": 2,
@@ -221,7 +248,24 @@
         "name": "Apple TV+",
         "chef": "Tim Apple",
         "discription": "Apple TV+ is an over-the-top ad-free subscription video on demand web television service of Apple Inc. that debuted on November 1, 2019.",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "NN15",
+            "name": "zakaria",
+            "lastName": "abulfath",
+            "age": 16,
+            "salaire": "8000$"
+          },
+          {
+            "id": 1,
+            "matricule": "FF13TT5",
+            "name": "zakaria",
+            "lastName": "die",
+            "age": 16,
+            "salaire": "700$"
+          }
+        ]
       },
       {
         "id": 13,
@@ -257,7 +301,16 @@
         "name": "Android",
         "chef": "Andy Rubin",
         "discription": "Android is a mobile operating system based on a modified version of the Linux kernel and other open source software, designed primarily for touchscreen mobile devices such as smartphones and tablets",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "RR13455",
+            "name": "Youssef",
+            "lastName": "Moha",
+            "age": 16,
+            "salaire": "6000$"
+          }
+        ]
       },
       {
         "id": 4,
@@ -287,7 +340,16 @@
         "name": "Amazon Prime Video",
         "chef": "Jeffrey Preston Bezos",
         "discription": "Prime Video, also marketed as Amazon Prime Video, is an American Internet video on demand service that is developed, owned, and operated by Amazon.",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "RR13455",
+            "name": "zakaria",
+            "lastName": "abulfath",
+            "age": 16,
+            "salaire": "8000$"
+          }
+        ]
       }
     ]
   }

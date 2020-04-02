@@ -6,6 +6,9 @@ $(document).ready(function () {
     if (window.location.pathname === "/department.html") {
         loadDepartmentInfo();
     }
+    if(window.location.pathname === "/search.html") {
+        loadSearchResult();
+    }
 });
 
 function loadDepartmentInfo() {
@@ -66,6 +69,30 @@ function toggleEffect() {
     }
 }
 
+function searchSalary(event,input){
+    if(event.keyCode === 13){
+        window.open('/search/?name='+input.value);
+    }
+}
+
+function loadSearchResult(){
+    let request = new XMLHttpRequest();
+    request.open("GET", "/api/search", true);
+
+    request.onload = function () {
+        if (this.status == 200) {
+            document.getElementById("salaryInfo").innerHTML = "";
+            let salaries = JSON.parse(this.responseText);
+            document.getElementById("searchFor").innerHTML = salaries[0].name.toUpperCase();
+            for(let s in salaries){
+                document.getElementById("salaryInfo").innerHTML += '<tr><td>' + salaries[s].matricule + '</td><td>' + salaries[s].entrepriceName + '</td><td>' + salaries[s].departementName + '</td><td>' + salaries[s].name + '</td><td>' + salaries[s].lastName + '</td><td>' + salaries[s].age + '</td><td>' + salaries[s].salaire + '</td></tr>';
+            }
+        }
+    }
+    request.send();
+}
+
+
 function addEnt() {
     let request = new XMLHttpRequest();
     request.onload = function () {
@@ -104,7 +131,7 @@ function showDepatements(id) {
             });
             let rows = "";
             for (let d in deprartments) {
-                rows += '<tr><td>' + deprartments[d].id + '</td><td>' + deprartments[d].name + '</td><td><a href="/department.html/?entId=' + id + '&depId=' + deprartments[d].id + '">plus de info <i class="fa fa-chevron-right" style="font-size:20px;"></i></a></td></tr>';
+                rows += '<tr><td>' + deprartments[d].id + '</td><td>' + deprartments[d].name + '</td><td><a href="/department/?entId=' + id + '&depId=' + deprartments[d].id + '">plus de info <i class="fa fa-chevron-right" style="font-size:20px;"></i></a></td></tr>';
             }
             document.getElementById("depTable").innerHTML = rows;
         }
