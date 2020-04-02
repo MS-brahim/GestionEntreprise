@@ -134,7 +134,16 @@
         "name": "Domaaaaaadd",
         "chef": "goooooooooooooool",
         "discription": "fdssssssssss",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "AAHH44",
+            "name": "Mariam",
+            "lastName": "Hadki",
+            "age": 26,
+            "salaire": "30000DH"
+          }
+        ]
       },
       {
         "id": 4,
@@ -163,7 +172,16 @@
         "name": "Sfad",
         "chef": "fgfd",
         "discription": "dfghjkl",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "ZZJJFF",
+            "name": "Mariam",
+            "lastName": "fola",
+            "age": 26,
+            "salaire": "300DH"
+          }
+        ]
       },
       {
         "id": 2,
@@ -337,6 +355,28 @@
         "name": "Twitch",
         "chef": "Steve pezos",
         "discription": "is an online streaming platforms for everything",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "GITSALAH",
+    "discription": "kanbi3 l7ot fih corona",
+    "location": "Merackech",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Batata",
+        "chef": "Salah",
+        "discription": "hshbsfsfpqsb sbdpBQPDBP sdpQBDäBdpB",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Batata2",
+        "chef": "Salah",
+        "discription": "hshbsfsfpqsb sbdpBQPDBP sdpQBDäBdpB",
         "salaries": []
       }
     ]
