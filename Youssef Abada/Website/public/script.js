@@ -6,7 +6,7 @@ $(document).ready(function () {
     if (window.location.pathname === "/department.html") {
         loadDepartmentInfo();
     }
-    if(window.location.pathname === "/search.html") {
+    if (window.location.pathname === "/search.html") {
         loadSearchResult();
     }
 });
@@ -69,13 +69,13 @@ function toggleEffect() {
     }
 }
 
-function searchSalary(event,input){
-    if(event.keyCode === 13){
-        window.open('/search/?name='+input.value);
+function searchSalary(event, input) {
+    if (event.keyCode === 13) {
+        window.open('/search/?name=' + input.value);
     }
 }
 
-function loadSearchResult(){
+function loadSearchResult() {
     let request = new XMLHttpRequest();
     request.open("GET", "/api/search", true);
 
@@ -83,9 +83,13 @@ function loadSearchResult(){
         if (this.status == 200) {
             document.getElementById("salaryInfo").innerHTML = "";
             let salaries = JSON.parse(this.responseText);
-            document.getElementById("searchFor").innerHTML = salaries[0].name.toUpperCase();
-            for(let s in salaries){
-                document.getElementById("salaryInfo").innerHTML += '<tr><td>' + salaries[s].matricule + '</td><td>' + salaries[s].entrepriceName + '</td><td>' + salaries[s].departementName + '</td><td>' + salaries[s].name + '</td><td>' + salaries[s].lastName + '</td><td>' + salaries[s].age + '</td><td>' + salaries[s].salaire + '</td></tr>';
+            if (salaries.length > 0) {
+                document.getElementById("searchFor").innerHTML = salaries[0].name.toUpperCase();
+                for (let s in salaries) {
+                    document.getElementById("salaryInfo").innerHTML += '<tr><td>' + salaries[s].matricule + '</td><td>' + salaries[s].entrepriceName + '</td><td>' + salaries[s].departementName + '</td><td>' + salaries[s].name + '</td><td>' + salaries[s].lastName + '</td><td>' + salaries[s].age + '</td><td>' + salaries[s].salaire + '</td></tr>';
+                }
+            }else{
+                document.getElementById("searchFor").innerHTML = "No result found!".toUpperCase();
             }
         }
     }
