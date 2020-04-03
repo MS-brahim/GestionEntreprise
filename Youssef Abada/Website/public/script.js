@@ -117,7 +117,7 @@ function loadSearchResult() {
             document.getElementById("salaryInfo").innerHTML = "";
             let salaries = JSON.parse(this.responseText);
             if (salaries.length > 0) {
-                document.getElementById("searchFor").innerHTML = salaries[0].name.toUpperCase();
+                document.getElementById("searchFor").innerHTML = "Vous cherchez <span class='text-primary'>"+salaries[0].name.toUpperCase()+"</span>";
                 for (let s in salaries) {
                     document.getElementById("salaryInfo").innerHTML += '<tr><td>' + salaries[s].matricule + '</td><td>' + salaries[s].entrepriceName + '</td><td>' + salaries[s].departementName + '</td><td>' + salaries[s].name + '</td><td>' + salaries[s].lastName + '</td><td>' + salaries[s].age + '</td><td>' + salaries[s].salaire + '</td></tr>';
                 }
