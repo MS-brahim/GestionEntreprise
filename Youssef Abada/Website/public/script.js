@@ -71,7 +71,7 @@ function toggleEffect() {
 
 function searchSalary(event, input) {
     if (event.keyCode === 13) {
-        window.open('/search/?name=' + input.value);
+        window.open('/search/?name=' + input.value,"_self");
     }
 }
 
