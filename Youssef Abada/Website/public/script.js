@@ -17,12 +17,45 @@ function loadDepartmentInfo() {
     request.onload = function () {
         if (this.status == 200) {
             let departement = JSON.parse(this.responseText);
-            document.getElementById("departName").innerHTML = departement.name + " <small>entreprise name <strong>" + departement.entrepriceName + "</strong> id(<strong>" + departement.entrepriceID + "</strong>)</small>";
-            document.getElementById("depInfo").innerHTML = '<tr><td>' + departement.id + '</td><td>' + departement.name + '</td><td>' + departement.chef + '</td><td>' + departement.discription + '</td><td>' + departement.salaries.length + '</td></tr>';
+            if(Object.keys(departement).length === 0) window.location.replace('/');
+            document.getElementById("departName").innerHTML = departement.name;
+            document.getElementById("modalDepTitle").innerHTML = departement.name;
+            document.getElementById("entrepriseName").innerHTML = departement.entrepriceName;
+            document.getElementById("departDisc").innerHTML = departement.discription;
+            document.getElementById("departChef").innerHTML = departement.chef;
+            document.getElementById("departSalaries").innerHTML = departement.salaries.length;
+            document.getElementById("addBtn").addEventListener('click', function () {
+                addSalary(departement.entrepriceID, departement.id);
+            });
+            for (let s in departement.salaries) {
+                document.getElementById("salTable").innerHTML += '<tr><td>' + departement.salaries[s].matricule + '</td><td>' + departement.salaries[s].name + '</td><td>' + departement.salaries[s].lastName + '</td><td>' + departement.salaries[s].age + '</td><td>' + departement.salaries[s].salaire + '</td></tr>';
+            }
         }
     }
     request.send();
 }
+
+function addSalary(eId, dId) {
+    let request = new XMLHttpRequest();
+    request.onload = function () {
+        if (this.status == 200) {
+            window.location.replace('/department/?entId=' + eId + '&depId=' + dId);
+        }
+    };
+    const salary = {
+        matricule: document.getElementById("matriculeSalary").value,
+        name: document.getElementById("nameSalary").value,
+        lastName: document.getElementById("lnameSalary").value,
+        age: +document.getElementById("ageSalary").value,
+        salaire: document.getElementById("salaire").value
+    };
+    const formData = JSON.stringify(salary);
+
+    request.open("POST", "/api/departement/" + eId + "/" + dId, true);
+    request.setRequestHeader("Content-type", "application/json");
+    request.send(formData);
+}
+
 
 function loadEntreprises() {
     let request = new XMLHttpRequest();
@@ -71,7 +104,7 @@ function toggleEffect() {
 
 function searchSalary(event, input) {
     if (event.keyCode === 13) {
-        window.open('/search/?name=' + input.value,"_self");
+        window.open('/search/?name=' + input.value, "_self");
     }
 }
 
@@ -88,8 +121,8 @@ function loadSearchResult() {
                 for (let s in salaries) {
                     document.getElementById("salaryInfo").innerHTML += '<tr><td>' + salaries[s].matricule + '</td><td>' + salaries[s].entrepriceName + '</td><td>' + salaries[s].departementName + '</td><td>' + salaries[s].name + '</td><td>' + salaries[s].lastName + '</td><td>' + salaries[s].age + '</td><td>' + salaries[s].salaire + '</td></tr>';
                 }
-            }else{
-                document.getElementById("searchFor").innerHTML = "No result found!".toUpperCase();
+            } else {
+                document.getElementById("searchFor").innerHTML = "Aucun résultat trouvé!".toUpperCase();
             }
         }
     }
@@ -101,7 +134,6 @@ function addEnt() {
     let request = new XMLHttpRequest();
     request.onload = function () {
         if (this.status == 200) {
-            //console.log(this.responseText);
             loadEntreprises();
         }
     };

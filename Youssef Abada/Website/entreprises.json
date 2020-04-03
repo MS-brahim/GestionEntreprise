@@ -110,6 +110,22 @@
             "lastName": "Zaki",
             "age": 20,
             "salaire": "7000DH"
+          },
+          {
+            "id": 2,
+            "matricule": "40040A",
+            "name": "Ronda",
+            "lastName": "Ramolia",
+            "age": 34,
+            "salaire": "330405£"
+          },
+          {
+            "id": 3,
+            "matricule": "eertt",
+            "name": "ggh",
+            "lastName": "rrtt",
+            "age": 22,
+            "salaire": "3345£"
           }
         ]
       },
@@ -147,7 +163,16 @@
         "name": "Yahoo! News",
         "chef": "Marissa Mayer",
         "discription": "Yahoo! News is a news website that originated as an internet-based news aggregator by Yahoo!. The site was created by a Yahoo! software engineer named Brad Clawsie in August of 1996. Articles originally came from news services such as the Associated Press, Reuters, Fox News, Al Jazeera, ABC News, USA Today, CNN and BBC News.",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "1995",
+            "name": "Mouisi",
+            "lastName": "Ibrahim",
+            "age": 24,
+            "salaire": "20000PHP"
+          }
+        ]
       }
     ]
   },
@@ -170,6 +195,14 @@
             "lastName": "fola",
             "age": 26,
             "salaire": "300DH"
+          },
+          {
+            "id": 2,
+            "matricule": "BOBOBO",
+            "name": "Jemmy",
+            "lastName": "Walston",
+            "age": 19,
+            "salaire": "2990$"
           }
         ]
       },
@@ -189,62 +222,55 @@
       },
       {
         "id": 4,
-        "name": "macOS",
-        "chef": "Tim Apple",
-        "discription": "macOS (previously Mac OS X and later OS X) is a series of proprietary graphical operating systems developed and marketed by Apple Inc. since 2001. It is the primary operating system for Apple's Mac computers. Within the market of desktop, laptop and home computers, and by web usage, it is the second most widely used desktop OS, after Microsoft Windows.",
-        "salaries": []
-      },
-      {
-        "id": 5,
         "name": "Shazam",
         "chef": "Dhiraj Mukherjee",
         "discription": "Shazam is an application owned and developed by Apple Inc. The application can identify music, movies, advertising, and television shows, based on a short sample played and using the microphone on the device. The software is available for Android, macOS, iOS, watchOS, tvOS, and Windows.",
         "salaries": []
       },
       {
-        "id": 6,
+        "id": 5,
         "name": "Final Cut Pro",
         "chef": "Randy Ubillos",
         "discription": "Final Cut Pro is a series of non-linear video editing software programs first developed by Macromedia Inc. and later Apple Inc. The most recent version, Final Cut Pro X 10.4.8, runs on Intel-based Mac computers powered by macOS Mojave 10.14.6 or later.",
         "salaries": []
       },
       {
-        "id": 7,
+        "id": 6,
         "name": "Logic Pro",
         "chef": "C-Lab",
         "discription": "Logic Pro is a digital audio workstation and MIDI sequencer software application for the macOS platform. It was originally created in the early 1990s as Notator Logic, or Logic, by German software developer C-Lab which later went by Emagic.",
         "salaries": []
       },
       {
-        "id": 8,
+        "id": 7,
         "name": "Xcode",
         "chef": "Lattner",
         "discription": "Xcode is an integrated development environment for macOS containing a suite of software development tools developed by Apple for developing software for macOS, iOS, iPadOS, watchOS, and tvOS.",
         "salaries": []
       },
       {
-        "id": 9,
+        "id": 8,
         "name": "AirPods",
         "chef": "Tim Apple",
         "discription": "AirPods are wireless Bluetooth earbuds created by Apple. They were first released on December 13, 2016 and are sold alongside the premium AirPods Pro.",
         "salaries": []
       },
       {
-        "id": 10,
+        "id": 9,
         "name": "Apple Pay",
         "chef": "Tim Apple",
         "discription": "Apple Pay is a mobile payment and digital wallet service by Apple Inc. that allows users to make payments in person, in iOS apps, and on the web. It is supported on the iPhone, Apple Watch, iPad, and Mac.",
         "salaries": []
-      }, 
+      },
       {
-        "id": 11,
+        "id": 10,
         "name": "Apple Music",
         "chef": "Tim Apple",
         "discription": "Apple Music is a music and video streaming service developed by Apple Inc. Users select music to stream to their device on-demand, or they can listen to existing, curated playlists. The service also includes the Internet radio station Beats 1, which broadcasts live to over 100 countries 24 hours a day.",
         "salaries": []
       },
       {
-        "id": 12,
+        "id": 11,
         "name": "Apple TV+",
         "chef": "Tim Apple",
         "discription": "Apple TV+ is an over-the-top ad-free subscription video on demand web television service of Apple Inc. that debuted on November 1, 2019.",
@@ -258,7 +284,7 @@
             "salaire": "8000$"
           },
           {
-            "id": 1,
+            "id": 2,
             "matricule": "FF13TT5",
             "name": "zakaria",
             "lastName": "die",
@@ -268,7 +294,7 @@
         ]
       },
       {
-        "id": 13,
+        "id": 12,
         "name": "Genius Bar",
         "chef": "Tim Apple",
         "discription": "The Genius Bar is a tech support station located inside Apple's retail stores, the purpose of which is to provide concierge-style support for customers of Apple products. Ron Johnson, the former Senior Vice President for Retail, has often referred to the Genius Bar as the 'heart and soul of our stores'",
@@ -321,7 +347,6 @@
       }
     ]
   },
-
   {
     "id": 7,
     "name": "Amazon Inc.",

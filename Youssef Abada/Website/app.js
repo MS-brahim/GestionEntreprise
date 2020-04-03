@@ -146,10 +146,6 @@ app.get('/department', (req, res) => {
                     }
                 }
             }
-            if (currentDepatment) {
-                res.redirect('/department.html/?entId=' + currentDepatment.entrepriceID + '&depId=' + currentDepatment.id);
-            }
-            res.status(404).send("there is no such department")
         }
     });
 });
@@ -174,7 +170,7 @@ app.post('/api/departement/:idE/:idD', (req, res) => {
             if (!(entreprice && departement)) return res.status(404).send("there is no such entreprise or department");
             else {
                 departement.salaries.push({
-                    "id": deprartments.salaries.length + 1,
+                    "id": departement.salaries.length + 1,
                     "matricule": req.body.matricule,
                     "name": req.body.name,
                     "lastName": req.body.lastName,
