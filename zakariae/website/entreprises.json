@@ -1,0 +1,356 @@
+[
+  {
+    "id": 1,
+    "name": "Facebook, Inc.",
+    "discription": "Facebook, Inc. is an American social media and technology company based in Menlo Park, California. It was founded by Mark Zuckerberg, along with fellow Harvard College students and roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes, originally as TheFacebook.com—today's Facebook, a popular global social networking website. Facebook is one of the world's most valuable companies. It is considered one of the Big Five technology companies along with Microsoft, Amazon, Apple, and Google.",
+    "location": "USA - Silicon Valley",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Instagram",
+        "chef": "Kevin Systrom, Mike Krieger",
+        "discription": "Instagram is an American photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger, and launched in October 2010 on iOS. A version for Android devices was released in April 2012, followed by a feature-limited website interface in November 2012, a Fire OS app on June 15, 2014 and an app for Windows 10 tablets and computers in October 2016. The app allows users to upload photos and videos, which can be edited with filters and organized with tags and location information. Posts can be shared publicly or with pre-approved followers. Users can browse other users' content by tags and locations, and view trending content. Users can like photos and follow other users to add their content to a feed.",
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "HH13455",
+            "name": "Youssef",
+            "lastName": "Abada",
+            "age": 26,
+            "salaire": "30000DH"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "WhatsApp",
+        "chef": "Brian Acton, Jan Koum",
+        "discription": "WhatsApp Messenger or simply WhatsApp is an American freeware, cross-platform messaging and Voice over IP (VoIP) service owned by Facebook, Inc.[45] It allows users to send text messages and voice messages,[46] make voice and video calls, and share images, documents, user locations, and other media.[47][48] WhatsApp's client application runs on mobile devices but is also accessible from desktop computers, as long as the user's mobile device remains connected to the Internet while they use the desktop app.[49] The service requires users to provide a standard cellular mobile number for registering with the service.[50] In January 2018, WhatsApp released a standalone business app targeted at small business owners, called WhatsApp Business, to allow companies to communicate with customers who use the standard WhatsApp client",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "Facebook Messenger",
+        "chef": "Mark Zuckerberg",
+        "discription": "Facebook Messenger (commonly known as Messenger)[9] is an American messaging app and platform developed by Facebook, Inc. Originally developed as Facebook Chat in 2008, the company revamped its messaging service in 2010, and subsequently released standalone iOS and Android apps in August 2011 and standalone Facebook Portal hardware for Messenger-based calling in Q4 2018. Over the years, Facebook has released new apps on a variety of different operating systems, launched a dedicated website interface (Messenger.com), and separated the messaging functionality from the main Facebook app, allowing users to use the web interface or download one of the standalone apps.",
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "HH199WW",
+            "name": "Youssef",
+            "lastName": "Mosa",
+            "age": 28,
+            "salaire": "60000DH"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Twitter",
+    "discription": "Twitter is an American microblogging and social networking service on which users post and interact with messages known as 'tweets'. Registered users can post, like, and retweet tweets, but unregistered users can only read them. Users access Twitter through its website interface, through Short Message Service (SMS) or its mobile-device application software ('app').[15] Twitter, Inc. is based in San Francisco, California, and has more than 25 offices around the world.[16] Tweets were originally restricted to 140 characters, but was doubled to 280 for non-Asian languages in November 2017.[17]",
+    "location": "San Francisco, California, United States",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Gnip",
+        "chef": "Jud Valeski and Eric Marcoullier",
+        "discription": "Gnip was acquired by Twitter in 2014 in a cash and stock deal worth more than $134 million. The company was a social media application programming interface (API) aggregation company. It was among the first social media API-aggregation service providers and provided data to Twitter long before the acquisition. Twitter extended its own data platform as well as its existing public API as a result of the acquisition.",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Magic Pony Technology",
+        "chef": "Zehan Wang",
+        "discription": "Twitter acquired Magic Pony Technology in 2016 in an effort to improve its machine-learning capabilities. The London-based company developed neural network systems for image-related data expansion. The acquisition was valued at $150 million, and both cofounders of Magic Pony Technology were retained in the deal. But the full terms of the deal were not disclosed by either party.",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "MoPub Advertising Solutions",
+        "chef": "Bryan Atwood",
+        "discription": "In 2013, Twitter embarked on developing a mobile advertising exchange. This kind of advertising appears on mobile platforms with wireless connections such as smartphones and tablets. To do so, Twitter utilized the technology of MoPub through a $350 million acquisition. Headquartered in San Francisco, MoPub hosts the world’s largest mobile advertising server with a real-time bidding exchange.",
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "RR1JJ55",
+            "name": "zakaria",
+            "lastName": "hola",
+            "age": 16,
+            "salaire": "900$"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Periscope",
+        "chef": " Kayvon Beykpour",
+        "discription": "Twitter acquired Periscope, the live-video streaming start-up in January 2015 to further develop its video capabilities, including the offering of real-time broadcasting services. The subsidiary launched its own proprietary app in March 2015. It allows users to watch live or previously broadcasted mobile video streams. Just under $100 million of stock and cash were exchanged in the acquisition.",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Microsoft",
+    "discription": "Microsoft Corporation is an American multinational technology company with headquarters in Redmond, Washington. It develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services. Its best known software products are the Microsoft Windows line of operating systems, the Microsoft Office suite, and the Internet Explorer and Edge web browsers. Its flagship hardware products are the Xbox video game consoles and the Microsoft Surface lineup of touchscreen personal computers.",
+    "location": "Albuquerque, New Mexico, U.S.",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Microsoft Windows",
+        "chef": "Satya Nadella",
+        "discription": "Microsoft Windows, commonly referred to as Windows, is a group of several proprietary graphical operating system families, all of which are developed and marketed by Microsoft. Each family caters to a certain sector of the computing industry. Active Microsoft Windows families include Windows NT and Windows IoT; these may encompass subfamilies, e.g. Windows Server or Windows Embedded Compact (Windows CE). Defunct Microsoft Windows families include Windows 9x, Windows Mobile and Windows Phone.",
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "HH55455",
+            "name": "Youssef",
+            "lastName": "Zaki",
+            "age": 20,
+            "salaire": "7000DH"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Office 365",
+        "chef": "Satya Nadella",
+        "discription": "Office 365 is a line of subscription services offered by Microsoft as part of the Microsoft Office product line. The brand encompasses plans that allow use of the Microsoft Office software suite over the life of the subscription, as well as cloud-based software as a service products for business environments, such as hosted Exchange Server, Skype for Business Server, and SharePoint, among others. All Office 365 plans include automatic updates to their respective software at no additional charge, as opposed to conventional licenses for these programs—where new versions require purchase of a new license.",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "Microsoft Azure",
+        "chef": "Satya Nadella",
+        "discription": "Microsoft Azure (formerly Windows Azure /ˈæʒər/) is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides software as a service (SaaS), platform as a service (PaaS) and infrastructure as a service (IaaS) and supports many different programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems.",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Yahoo!",
+    "discription": "Yahoo! is an American web services provider headquartered in Sunnyvale, California, and owned by Verizon Media.[9][10] The original Yahoo! company was founded by Jerry Yang and David Filo in January 1994 and was incorporated on March 2, 1995. Yahoo was one of the pioneers of the early Internet era in the 1990s.",
+    "location": "Sunnyvale, California, U.S.",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Yahoo! Mail",
+        "chef": "Marissa Mayer",
+        "discription": "Yahoo! Mail is an email service launched in 1997 by the American company Yahoo!, now a subsidiary of Verizon. It offers four different email plans: three for personal use (Basic, Plus, and Ad Free) and another for businesses.[5][6] As of January 2020, Yahoo! Mail had 225 million users.",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Yahoo! News",
+        "chef": "Marissa Mayer",
+        "discription": "Yahoo! News is a news website that originated as an internet-based news aggregator by Yahoo!. The site was created by a Yahoo! software engineer named Brad Clawsie in August of 1996. Articles originally came from news services such as the Associated Press, Reuters, Fox News, Al Jazeera, ABC News, USA Today, CNN and BBC News.",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Apple Inc.",
+    "discription": "Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services. It is considered one of the Big Four technology companies, alongside Amazon, Google, and Microsoft.",
+    "location": "Cupertino, California",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "iTunes",
+        "chef": "Tim Cook",
+        "discription": "iTunes is a media player, media library, Internet radio broadcaster, mobile device management utility, and the client app for iTunes Store, developed by Apple Inc. It is used to purchase, play, download, and organize digital multimedia, on personal computers running the macOS and Windows operating systems, and can be used to rip songs from CDs, as well as play content with the use of dynamic, smart playlists. Options for sound optimizations exist, as well as ways to wirelessly share the iTunes library.",
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "ZZJJFF",
+            "name": "Mariam",
+            "lastName": "fola",
+            "age": 26,
+            "salaire": "300DH"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "macOS",
+        "chef": "Tim Apple",
+        "discription": "macOS (previously Mac OS X and later OS X) is a series of proprietary graphical operating systems developed and marketed by Apple Inc. since 2001. It is the primary operating system for Apple's Mac computers. Within the market of desktop, laptop and home computers, and by web usage, it is the second most widely used desktop OS, after Microsoft Windows.",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "iOS",
+        "chef": "Tim Apple",
+        "discription": "iOS is a mobile operating system created and developed by Apple Inc. exclusively for its hardware. It is the operating system that presently powers many of the company's mobile devices, including the iPhone, and iPod Touch; it also powered the iPad prior to the introduction of iPadOS in 2019.",
+        "salaries": []
+      },
+      {
+        "id": 4,
+        "name": "macOS",
+        "chef": "Tim Apple",
+        "discription": "macOS (previously Mac OS X and later OS X) is a series of proprietary graphical operating systems developed and marketed by Apple Inc. since 2001. It is the primary operating system for Apple's Mac computers. Within the market of desktop, laptop and home computers, and by web usage, it is the second most widely used desktop OS, after Microsoft Windows.",
+        "salaries": []
+      },
+      {
+        "id": 5,
+        "name": "Shazam",
+        "chef": "Dhiraj Mukherjee",
+        "discription": "Shazam is an application owned and developed by Apple Inc. The application can identify music, movies, advertising, and television shows, based on a short sample played and using the microphone on the device. The software is available for Android, macOS, iOS, watchOS, tvOS, and Windows.",
+        "salaries": []
+      },
+      {
+        "id": 6,
+        "name": "Final Cut Pro",
+        "chef": "Randy Ubillos",
+        "discription": "Final Cut Pro is a series of non-linear video editing software programs first developed by Macromedia Inc. and later Apple Inc. The most recent version, Final Cut Pro X 10.4.8, runs on Intel-based Mac computers powered by macOS Mojave 10.14.6 or later.",
+        "salaries": []
+      },
+      {
+        "id": 7,
+        "name": "Logic Pro",
+        "chef": "C-Lab",
+        "discription": "Logic Pro is a digital audio workstation and MIDI sequencer software application for the macOS platform. It was originally created in the early 1990s as Notator Logic, or Logic, by German software developer C-Lab which later went by Emagic.",
+        "salaries": []
+      },
+      {
+        "id": 8,
+        "name": "Xcode",
+        "chef": "Lattner",
+        "discription": "Xcode is an integrated development environment for macOS containing a suite of software development tools developed by Apple for developing software for macOS, iOS, iPadOS, watchOS, and tvOS.",
+        "salaries": []
+      },
+      {
+        "id": 9,
+        "name": "AirPods",
+        "chef": "Tim Apple",
+        "discription": "AirPods are wireless Bluetooth earbuds created by Apple. They were first released on December 13, 2016 and are sold alongside the premium AirPods Pro.",
+        "salaries": []
+      },
+      {
+        "id": 10,
+        "name": "Apple Pay",
+        "chef": "Tim Apple",
+        "discription": "Apple Pay is a mobile payment and digital wallet service by Apple Inc. that allows users to make payments in person, in iOS apps, and on the web. It is supported on the iPhone, Apple Watch, iPad, and Mac.",
+        "salaries": []
+      }, 
+      {
+        "id": 11,
+        "name": "Apple Music",
+        "chef": "Tim Apple",
+        "discription": "Apple Music is a music and video streaming service developed by Apple Inc. Users select music to stream to their device on-demand, or they can listen to existing, curated playlists. The service also includes the Internet radio station Beats 1, which broadcasts live to over 100 countries 24 hours a day.",
+        "salaries": []
+      },
+      {
+        "id": 12,
+        "name": "Apple TV+",
+        "chef": "Tim Apple",
+        "discription": "Apple TV+ is an over-the-top ad-free subscription video on demand web television service of Apple Inc. that debuted on November 1, 2019.",
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "NN15",
+            "name": "zakaria",
+            "lastName": "abulfath",
+            "age": 16,
+            "salaire": "8000$"
+          },
+          {
+            "id": 1,
+            "matricule": "FF13TT5",
+            "name": "zakaria",
+            "lastName": "die",
+            "age": 16,
+            "salaire": "700$"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Genius Bar",
+        "chef": "Tim Apple",
+        "discription": "The Genius Bar is a tech support station located inside Apple's retail stores, the purpose of which is to provide concierge-style support for customers of Apple products. Ron Johnson, the former Senior Vice President for Retail, has often referred to the Genius Bar as the 'heart and soul of our stores'",
+        "salaries": []
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Google",
+    "discription": "Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware. It is considered one of the Big Four technology companies, alongside Amazon, Apple, and Microsoft.Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California.",
+    "location": "Mountain View, California, U.S.",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Gmail",
+        "chef": "Paul Buchheit",
+        "discription": "Gmail is a free email service developed by Google. Users can access Gmail on the web and using third-party programs that synchronize email content through POP or IMAP protocols. Gmail started as a limited beta release on April 1, 2004 and ended its testing phase on July 7, 2009.",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "YouTube",
+        "chef": "Susan Wojcicki",
+        "discription": "YouTube is an American online video-sharing platform headquartered in San Bruno, California. Three former PayPal employees—Chad Hurley, Steve Chen, and Jawed Karim—created the service in February 2005. Google bought the site in November 2006 for US$1.65 billion; YouTube now operates as one of Google's subsidiaries.",
+        "salaries": []
+      },
+      {
+        "id": 3,
+        "name": "Android",
+        "chef": "Andy Rubin",
+        "discription": "Android is a mobile operating system based on a modified version of the Linux kernel and other open source software, designed primarily for touchscreen mobile devices such as smartphones and tablets",
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "RR13455",
+            "name": "Youssef",
+            "lastName": "Moha",
+            "age": 16,
+            "salaire": "6000$"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Google Maps",
+        "chef": "Jens Eilstrup Rasmussen, Lars Rasmussen",
+        "discription": "Google Maps is a web mapping service developed by Google. It offers satellite imagery, aerial photography, street maps, 360° interactive panoramic views of streets, real-time traffic conditions, and route planning for traveling by foot, car, bicycle and air, or public transportation.",
+        "salaries": []
+      }
+    ]
+  },
+
+  {
+    "id": 7,
+    "name": "Amazon Inc.",
+    "discription": "Amazon.com, Inc., is an American multinational technology company based in Seattle, with 750,000 employees.[8] It focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It is considered one of the Big Four tech companies, along with Google, Apple, and Microsoft. It has been referred to as 'one of the most influential economic and cultural forces in the world.'",
+    "location": "Seattle, Washington, United States",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Twitch",
+        "chef": "Justin Kan, Emmett Shear",
+        "discription": "Twitch is a video live streaming service operated by Twitch Interactive, a subsidiary of Amazon.[2] Introduced in June 2011 as a spin-off of the general-interest streaming platform, Justin.tv, the site primarily focuses on video game live streaming, including broadcasts of eSports competitions, in addition to music broadcasts, creative content, and more recently, 'in real life' streams. Content on the site can be viewed either live or via video on demand.",
+        "salaries": []
+      },
+      {
+        "id": 2,
+        "name": "Amazon Prime Video",
+        "chef": "Jeffrey Preston Bezos",
+        "discription": "Prime Video, also marketed as Amazon Prime Video, is an American Internet video on demand service that is developed, owned, and operated by Amazon.",
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "RR13455",
+            "name": "zakaria",
+            "lastName": "abulfath",
+            "age": 16,
+            "salaire": "8000$"
+          }
+        ]
+      }
+    ]
+  }
+]
