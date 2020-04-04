@@ -34,7 +34,10 @@ function ajaxRequest(method, url, callback, data) {
 
 function loadDepartmentInfo() {
     ajaxRequest("GET", "/api/departement/", res => {
-        if (Object.keys(res).length === 0) window.location.replace('/');
+        if (Object.keys(res).length === 0) {
+            window.location.replace('/');
+            return;
+        }
         document.getElementById("departName").innerHTML = res.name;
         document.getElementById("modalDepTitle").innerHTML = res.name;
         document.getElementById("entrepriseName").innerHTML = res.entrepriceName;
