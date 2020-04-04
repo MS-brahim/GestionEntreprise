@@ -1,181 +1,49 @@
-body {
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
+}
+.ent{
+  border: 1px solid #333;
+  border-radius: 30px;
+
 }
 
-.navbar {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-shadow: 0 3px 6px #80808087;
-          box-shadow: 0 3px 6px #80808087;
-  padding: 10px 30px;
-}
-
-.navbar .logo {
-  width: 20%;
-  height: auto;
-}
-
-.navbar .logo img {
-  width: 136px;
-}
-
-.navbar .sidenav {
-  margin: 20px 0;
-}
-
-.navbar .sidenav input {
-  border-radius: 37px;
-  width: 450px;
-  height: 54px;
-  padding: 10px;
-  font-size: 20px;
-  color: #000000e6;
-  border: 1px solid #808080;
-}
-
-.navbar .sidenav a {
-  text-decoration: none;
-  color: #5599FF;
-  font-size: 28px;
-  margin: 10px;
-}
-
-.navbar .sidenav a i {
-  position: absolute;
-  margin: 12px -65px;
-  color: #808080;
-}
-
-.container-table {
-  margin: auto;
-  width: 78%;
-  margin-top: 30px;
-}
-
-.container-table a {
-  font-size: 22px;
-}
-
-.container-table .tableSalarie {
-  border: 1px solid gray;
-  border-radius: 37px;
-  margin-top: 20px;
-}
-
-.container-table .tableSalarie h4 {
+.ent .ent-name{
   text-align: center;
-  padding: 27px 0;
-  font-size: 24px;
+  border-bottom: 1px solid #333;
+  padding: 10px;
 }
 
-.container-table .tableSalarie tr {
-  font-size: 24px;
+.ent .ent-body{
+  padding: 6px 10px 15px 10px;
 }
 
-.container-table #addSalary {
-  top: 22%;
+.ent .show-more, .ent .show-less{
+  cursor: pointer;
+}
+.ent .ent-detail .map{
+  width: 100%;
+  height: 200px;
+}
+.ent .ent-detail .detail-text{
+  display: flex;
+  justify-content: space-between;
 }
 
-.container-table #addSalary .modal-content {
-  border-radius: 37px;
-}
-
-.container-table #addSalary .modal-content h5 {
-  margin: 0 18px;
-}
-
-.container-table #addSalary .modal-content .form-inline {
-  margin: 20px 10px;
-}
-
-.container-table #addSalary .modal-content .form-inline .form-control {
-  margin: 6px auto;
-  border-radius: 10px;
-  width: 279px;
-  height: 61px;
-}
-
-.container-table #addSalary .modal-content .btn {
-  margin: 30px 0;
-  border-radius: 9px;
-  width: 45%;
+.ent .ent-disc{
+  transition: height 1s;
   height: 70px;
+  overflow: hidden;
 }
-
-@media (max-width: 414px) {
-  .navbar .logo img {
-    width: 75px;
-  }
-  .navbar .sidenav {
-    margin: 5px 0;
-  }
-  .navbar .sidenav input {
-    width: 160px;
-    height: 40px;
-    font-size: 14px;
-  }
-  .navbar .sidenav a {
-    font-size: 14px;
-    margin: 0;
-  }
-  .navbar .sidenav a i {
-    margin: 13px -25px;
-  }
-  .container-table {
-    width: 98%;
-  }
-  .container-table a {
-    font-size: 18px;
-  }
-  .container-table .tableSalarie h4 {
-    font-size: 16px;
-  }
-  .container-table .tableSalarie tr {
-    font-size: 14px;
-  }
-  .container-table .tableSalarie tr th {
-    padding: 1rem;
-  }
+.push{
+  height: 40px;
 }
-
-@media (min-width: 414px) and (max-width: 889px) {
-  .navbar {
-    min-width: 375px;
-  }
-  .navbar .logo img {
-    width: 100px;
-  }
-  .navbar .sidenav {
-    margin: 5px 0;
-  }
-  .navbar .sidenav input {
-    width: 175px;
-    height: 40px;
-    font-size: 16px;
-  }
-  .navbar .sidenav a {
-    font-size: 16px;
-    margin: 0;
-  }
-  .navbar .sidenav a i {
-    margin: 12px -27px;
-  }
-  .container-table {
-    width: 90%;
-  }
-  .container-table a {
-    font-size: 20px;
-  }
-  .container-table .tableSalarie h4 {
-    font-size: 18px;
-  }
-  .container-table .tableSalarie tr {
-    font-size: 16px;
-  }
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 40px;
+  color: white;
 }
-/*# sourceMappingURL=style.css.map */
+/* # sourceMappingURL=style.css.map */
