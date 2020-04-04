@@ -57,7 +57,16 @@
         "name": "Gnip",
         "chef": "Jud Valeski and Eric Marcoullier",
         "discription": "Gnip was acquired by Twitter in 2014 in a cash and stock deal worth more than $134 million. The company was a social media application programming interface (API) aggregation company. It was among the first social media API-aggregation service providers and provided data to Twitter long before the acquisition. Twitter extended its own data platform as well as its existing public API as a result of the acquisition.",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "ZZEERR",
+            "name": "John",
+            "lastName": "Doe",
+            "age": 27,
+            "salaire": "13450µ"
+          }
+        ]
       },
       {
         "id": 2,
@@ -79,6 +88,14 @@
             "lastName": "hola",
             "age": 16,
             "salaire": "900$"
+          },
+          {
+            "id": 2,
+            "matricule": "VOL133",
+            "name": "Doe",
+            "lastName": "John",
+            "age": 28,
+            "salaire": "27889µ"
           }
         ]
       },
@@ -218,7 +235,16 @@
         "name": "iOS",
         "chef": "Tim Apple",
         "discription": "iOS is a mobile operating system created and developed by Apple Inc. exclusively for its hardware. It is the operating system that presently powers many of the company's mobile devices, including the iPhone, and iPod Touch; it also powered the iPad prior to the introduction of iPadOS in 2019.",
-        "salaries": []
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "WWW55",
+            "name": "John",
+            "lastName": "Doe",
+            "age": 26,
+            "salaire": "12000DH"
+          }
+        ]
       },
       {
         "id": 4,
@@ -375,6 +401,37 @@
             "salaire": "8000$"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Avito",
+    "discription": "A Moroccan platform for selling and being a third-party between the seller and the buyer",
+    "location": "Morocco - casablanca",
+    "deprartments": [
+      {
+        "id": 1,
+        "name": "Department test",
+        "chef": "test",
+        "discription": "That person is awesome ",
+        "salaries": [
+          {
+            "id": 1,
+            "matricule": "TOTO12",
+            "name": "lmjad",
+            "lastName": "ndour",
+            "age": 24,
+            "salaire": "50000DH"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Department test 2",
+        "chef": "test 2",
+        "discription": "That person is awesome 2",
+        "salaries": []
       }
     ]
   }
