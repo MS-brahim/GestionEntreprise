@@ -1689,25 +1689,20 @@ pre code {
 
 .table {
   width: 100%;
+  margin-bottom: 1rem;
   color: #212529;
 }
 
 .table th,
 .table td {
-  padding: 1.20rem;
+  padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
-  text-align: center;
 }
 
 .table thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #dee2e6;
-  font-weight: initial;
-  color: #5599FF;
-
-
-
 }
 
 .table tbody + tbody {
@@ -6098,7 +6093,7 @@ a.close.disabled {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 670px;
+    max-width: 500px;
     margin: 1.75rem auto;
   }
   .modal-dialog-scrollable {

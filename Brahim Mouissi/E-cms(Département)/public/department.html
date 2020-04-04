@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departement information</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="bootstrap.js"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-light navbar-light mb-3" style="box-shadow:#ddd 1px 1px 1px;">
+        <a class="navbar-brand mr-auto" href="/">
+            <img src="LOGO.png" alt="E-cms" style="width:80px;">
+        </a>
+        <div class="form-inline">
+            <div style="position: relative;">
+                <input onkeyup="searchSalary(event,this)" class="form-control"
+                    style="border-radius: 30px; width: 300px;" type="text" placeholder="chercher un salarié">
+                <div style="display: inline-block; position: absolute; right: 10px; bottom: 8px;"><i
+                        class="fa fa-search" style="font-size:20px; color: #333;"></i></div>
+            </div>
+            </form>
+            <a class="nav-link text-primary" href="#">Se déconnecter</a>
+    </nav>
+
+
+    <div class="container">
+        <div class=" jumbotron">
+            <h1>information pour <span class="text-primary" id="departName"></span></h1>
+            <p>nom d'entreprise est <strong id="entrepriseName"></strong></p>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#addSalary">+ Ajouter a
+                    nouveau salarié</button>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title" id="departName"></h4>
+                <p class="card-text" id="departDisc"></p>
+            </div>
+            <div class="card-footer" style="display: flex; justify-content: space-between;">
+                <div>
+                    <p class="card-text">chef de département <span class="text-primary" id="departChef"></span></p>
+                    <p>le nombre de salarié est <span class="text-primary" id="departSalaries"></span></p>
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#showSalaries"
+                    style="align-self: center; border-radius: 8px; font-size: .9em; background-color: #5599FF; color: white;">affiche
+                    tout le salariés</button>
+            </div>
+        </div>
+
+
+
+        <!-- add salary modal -->
+        <div class="modal fade" id="addSalary">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Ajouter a nouveau salarié dans <span class="text-primary"
+                                id="modalDepTitle"></span></h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="matriculeSalary" placeholder="Matricule"
+                                        name="matriculeSalary">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="nameSalary" placeholder="Nom"
+                                        name="nameSalary">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="lnameSalary" placeholder="Prenom"
+                                        name="lnameSalary">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="ageSalary" placeholder="Age"
+                                        name="ageSalary">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="salaire" placeholder="Salaire"
+                                        name="salaire">
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-end">
+                                <input type="button" class="btn btn-primary m-3" id="addBtn"
+                                    style="font-size: .9em; background-color: #5599FF; color: white; "
+                                    data-dismiss="modal" value="Ajouter">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- show salaries modal -->
+        <div class="modal fade" id="showSalaries">
+            <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h5 class="modal-title">liste des salariés</h5>
+
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Matricule</th>
+                                    <th>Prenom</th>
+                                    <th>Nom</th>
+                                    <th>Age</th>
+                                    <th>Salaire</th>
+                                </tr>
+                            </thead>
+                            <tbody id="salTable">
+                                <!-- departement will be laoded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
