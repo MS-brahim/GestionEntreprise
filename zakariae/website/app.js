@@ -8,6 +8,7 @@ const router = express.Router();
 app.use(express.static(__dirname + '\\public'));
 app.use('/', router);
 app.use(express.json());
+let currentDepatment = {};
 let searchResult = [];
 
 app.get('/', (req, res) => {
