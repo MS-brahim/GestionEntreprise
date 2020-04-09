@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+    
+    </head>
+
+<body>
+    <nav class="navbar bg-light navbar-light mb-3" style="box-shadow:#ddd 1px 1px 1px;">
+        <a class="navbar-brand mr-auto" href="/">
+            <img src="LOGO.png" alt="E-cms" style="width:80px;">
+        </a>
+        <div class="form-inline">
+            <div style="position: relative;">
+                <input onkeyup="searchSalary(event,this)" class="form-control"
+                    style="border-radius: 30px; width: 300px;" type="text" placeholder="chercher un salarié">
+                <div style="display: inline-block; position: absolute; right: 10px; bottom: 8px;"><i
+                        class="fa fa-search" style="font-size:20px; color: #333;"></i></div>
+            </div>
+            </form>
+            <a class="nav-link text-primary" href="#">Se déconnecter</a>
+    </nav>
+    <div class="container" style="height: 81%;">
+        <div class=" jumbotron">
+            <h1 id="searchFor"> </h1>
+        </div>
+        <table class="table">
+            <thead>
+                <tr style="color: #5599FF">
+                    <th>Matricule</th>
+                    <th>Nom d'entreprise</th>
+                    <th>Nom de département</th>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Age</th>
+                    <th>Salaire</th>
+                </tr>
+            </thead>
+            <tbody id="salaryInfo">
+                <!-- departement information will be laoded here -->
+            </tbody>
+        </table>
+        <div class="push"></div>
+    </div>
+    <div class="footer">
+        Tous droits réservés &copy; 2020
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
