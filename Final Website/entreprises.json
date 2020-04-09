@@ -15,7 +15,31 @@
             "id": 1,
             "matricule": "HH13455",
             "name": "Youssef",
-            "lastName": "Abada",
+            "lastName": "ABADA",
+            "age": 26,
+            "salaire": "30000DH"
+          },
+          {
+            "id": 1,
+            "matricule": "HH13455",
+            "name": "Brahim",
+            "lastName": "MOUISSI",
+            "age": 26,
+            "salaire": "30000DH"
+          },
+          {
+            "id": 1,
+            "matricule": "HH13455",
+            "name": "ZAKARIA",
+            "lastName": "AOUFATH",
+            "age": 26,
+            "salaire": "30000DH"
+          },
+          {
+            "id": 1,
+            "matricule": "HH13455",
+            "name": "Lmjed",
+            "lastName": "NDOUR",
             "age": 26,
             "salaire": "30000DH"
           }
