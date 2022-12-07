@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/MS-brahim/GestionEntreprise#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "nodeman": "^1.1.2"
   }
 }
